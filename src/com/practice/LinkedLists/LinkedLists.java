@@ -148,6 +148,19 @@ public class LinkedLists {
            curr=curr.next;
        }
     }
+    public void removeDuplicate(){
+        Node curr = head;
+        if(isEmpty(curr)){
+            System.out.println("Empty List");
+            return;
+        }
+        if(curr.next != null && curr.data == curr.next.data){
+            curr.next=curr.next.next;
+        }
+        else{
+            curr=curr.next;
+        }
+    }
     public boolean isEmpty(Node n){
         return n == null;
     }

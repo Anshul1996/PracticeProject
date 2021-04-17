@@ -1,5 +1,6 @@
 package com.practice.main;
 
+import com.practice.Lambda.Person;
 import com.practice.LinkedLists.LinkedLists;
 import com.practice.multithreading.UsingRunnable;
 import com.practice.multithreading.UsingThreadClass;
@@ -10,7 +11,7 @@ import java.util.*;
 
 public class Start {
     public static void main(String args[]){
-
+      //System.out.print(Class.forName());
      /* for(int i=0;i<8;i++){
          // UsingThreadClass th1 =new UsingThreadClass();
           UsingRunnable th1 = new UsingRunnable();
@@ -19,7 +20,7 @@ public class Start {
       }
 */
      // int[] SortedArray = new int[]{1,2,3,5,7,8,9,11};
-      Integer[] UnSortedArray =new Integer[]{4,1,6,7,8,3,9,2};
+     // Integer[] UnSortedArray =new Integer[]{4,1,6,7,8,3,9,2};
     /*  List<Integer> ll= Arrays.asList(UnSortedArray);
       Collections.sort(ll);
       System.out.println(ll);
@@ -28,7 +29,7 @@ public class Start {
       Arrays.sort(UnSortedArray, Collections.reverseOrder());
         System.out.print(Arrays.toString(UnSortedArray));*/
 
-        HashSet<Integer> hs=new LinkedHashSet<>(Arrays.asList(UnSortedArray));
+      /*  HashSet<Integer> hs=new LinkedHashSet<>(Arrays.asList(UnSortedArray));
         List<Integer> ls = new ArrayList<>(hs);
         System.out.println(ls);
         Collections.sort(ls);
@@ -40,14 +41,16 @@ public class Start {
         hm.put(23,"Akshit");
         hm.put(12,"Atul");
         hm.put(67,"Ankush");
-        hm.put(67,"Anil");
+        hm.put(67,"Anil");*/
 
-        TreeMap<Integer,String> tm =new TreeMap<>(hm);
-        System.out.println(tm);
+      //  TreeMap<Integer,String> tm =new TreeMap<>(hm);
+       // System.out.println(tm);
 
 
-      //int[] Garray = new int[]{1,4,6,2,1,2,5,7,8,5,4};
-       // Searching sh = new Searching();
+   /*   int[] Garray = new int[]{4,1,2,1,2};*/
+        Searching sh = new Searching();
+        System.out.println( sh.strStr("hello","ll"));
+
        /* System.out.println("Index is ::"+sh.LinearUnSortedSearch(UnSortedArray,9));
         System.out.println("Index is ::"+sh.LinearSortedSearch(SortedArray,8));
         System.out.println("Index is ::"+sh.BinarySearchIterative(SortedArray,9));
@@ -78,5 +81,27 @@ public class Start {
       //  System.out.println();
        // ls.reverseLinkedList();
        // ls.printList();
+
+
+     /* List<Person> ls = new ArrayList<>();
+      ls.add(new Person("Rishab","Pant",23));
+      ls.add(new Person("Pritvi","Shaw",21));
+      ls.add(new Person("Kagiso","Rabada",29));
+      Comparator com =new Comparator<Person>() {
+        @Override
+        public int compare(Person o1, Person o2) {
+          if(o1.getAge() > o2.getAge())
+            return 1;
+          else
+            return -1;
+
+        }
+      };
+      Collections.sort(ls,com);
+       ls.forEach(p->System.out.println(p.getAge()));
+
+*/
+       
     }
 }
+

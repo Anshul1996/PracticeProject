@@ -1,6 +1,10 @@
 package com.practice.searching;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 
 public class Searching {
     //O(n)
@@ -74,5 +78,61 @@ public class Searching {
         }
     }
 
+        public void rotate(int[] nums, int k) {
+            Arrays.stream(nums).forEach(System.out::print);
+            System.out.println();
+            reverse(nums,0,k-1);
+            Arrays.stream(nums).forEach(System.out::print);
+            System.out.println();
+            reverse(nums,k,nums.length-1);
+            Arrays.stream(nums).forEach(System.out::print);
+            System.out.println();
+            reverse(nums,0,nums.length-1);
+           Arrays.stream(nums).forEach(System.out::print);
+        }
+        public void reverse(int[] nums,int start,int end) {
+            while (start < end) {
+                int temp = nums[start];
+                nums[start] = nums[end];
+                nums[end] = temp;
+                start++;
+                end--;
+            }
+        }
+         public void reverseArray(int[] arr){
+                int start=0;
+                int end=arr.length-1;
+                int tmp;
+                while(start < end){
+                    tmp=arr[start];
+                    arr[start]=arr[end];
+                    arr[end]=tmp;
+                    start++;
+                    end--;
+            }
+                for(int x : arr )
+                System.out.print(x+" ");
+        }
+
+    public int singleNumber(int[] nums) {
+        int result = 0;
+        for(int num : nums) {
+            result = result ^ num;
+            System.out.println(result);
+        }
+        return result;
+    }
+
+    public int strStr(String haystack, String needle) {
+        if(haystack.length() < needle.length()){
+            return -1;
+        }
+        if(haystack.equals(needle)){
+            return -1;
+        }
+        strStr(haystack.substring(0,haystack.length()-1),needle);
+
+        return -1;
+    }
 
 }
